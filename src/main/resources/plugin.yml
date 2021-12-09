@@ -1,0 +1,7 @@
+name: PyraliaUHC-Classic
+version: '${project.version}'
+main: fr.ariloxe.classic.Main
+author: Ariloxe
+depend:
+  - pyralia-core
+  - PyraliaUHC-API
