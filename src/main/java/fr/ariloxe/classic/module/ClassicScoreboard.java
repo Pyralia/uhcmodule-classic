@@ -33,18 +33,18 @@ public class ClassicScoreboard implements UHCScoreboard {
             int a = UHCApi.getApi().getWorldManager().getUhcBorder().getSize();
 
             objectiveSign.setDisplayName("§6§lUHCHost");
-            objectiveSign.setLine(1, "§f");
-            objectiveSign.setLine(2, " §8┃ §7Host: §a" + gameManager.getHost());
-            objectiveSign.setLine(3, " §8┃ §7Joueur(s): §e" + gameManager.getAliveUhcPlayers().size() + (UHCTeamManager.getInstance().isActivated() ? " §7(" + gameManager.getAliveUhcTeams().size() + ")" : ""));
-            objectiveSign.setLine(4, "§d");
-            objectiveSign.setLine(5, " §8┃ §7Temps: §f" + gameManager.getTimerTask().getTimer());
-            objectiveSign.setLine(6, " §8┃ §7PvP: " + getTimeBeforePvP());
-            objectiveSign.setLine(7, " §8┃ §7Bordure: " + getTimeBeforeBorder());
-            objectiveSign.setLine(8, "§8");
-            objectiveSign.setLine(9, " §8┃ §7Rayon: §c±" + a / 2 + "§8 (§f" + HostRuleDouble.BLOCKS_PER_SECONDS.getValue() + "b/s§8)");
-            objectiveSign.setLine(10, " §8┃ §7Centre: §c" + DirectionnalArrow.distance(player.getLocation(), UHCApi.getApi().getWorldManager().getCenter()) + "m " + DirectionnalArrow.Fleche(DirectionnalArrow.Angle(player, UHCApi.getApi().getWorldManager().getCenter())));
-            objectiveSign.setLine(11, "§e");
-            objectiveSign.setLine(12, "§6" + ip);
+            objectiveSign.setLine(0, "§f");
+            objectiveSign.setLine(1, " §8┃ §7Host: §a" + gameManager.getHost());
+            objectiveSign.setLine(2, " §8┃ §7Joueur(s): §e" + gameManager.getAliveUhcPlayers().size() + (UHCTeamManager.getInstance().isActivated() ? " §7(" + gameManager.getAliveUhcTeams().size() + ")" : ""));
+            objectiveSign.setLine(3, "§d");
+            objectiveSign.setLine(4, " §8┃ §7Temps: §f" + gameManager.getTimerTask().getTimer());
+            objectiveSign.setLine(5, " §8┃ §7PvP: " + getTimeBeforePvP());
+            objectiveSign.setLine(6, " §8┃ §7Bordure: " + getTimeBeforeBorder());
+            objectiveSign.setLine(7, "§8");
+            objectiveSign.setLine(8, " §8┃ §7Rayon: §c±" + a / 2 + "§8 (§f" + HostRuleDouble.BLOCKS_PER_SECONDS.getValue() + "b/s§8)");
+            objectiveSign.setLine(9, " §8┃ §7Centre: §c" + DirectionnalArrow.distance(player.getLocation(), UHCApi.getApi().getWorldManager().getCenter()) + "m " + DirectionnalArrow.Fleche(DirectionnalArrow.Angle(player, UHCApi.getApi().getWorldManager().getCenter())));
+            objectiveSign.setLine(10, "§e");
+            objectiveSign.setLine(11, "§8§l❯ §6" + ip);
         } else if(gameManager.getScoreboardStage() == ScoreboardStage.KILLS){
 
             objectiveSign.setDisplayName("§6§lPyralia §8§l» §f§lKills");

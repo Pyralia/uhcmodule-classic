@@ -1,4 +1,4 @@
-name: PyraliaUHC-Classic
+name: PyraliaUHC-CModule
 version: '${project.version}'
 main: fr.ariloxe.classic.Main
 author: Ariloxe
