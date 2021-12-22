@@ -24,8 +24,12 @@ public class Classic extends Module {
     public Classic(UHCApi instance) {
         super("§6§lUHCHost", Material.GOLDEN_APPLE, instance);
         super.setConfigurable(false);
-        super.setHandler(new ClassicListener(this));
         super.setUhcScoreboard(new ClassicScoreboard());
+    }
+
+    @Override
+    public void onRegister() {
+        Bukkit.getPluginManager().registerEvents(new ClassicListener(this), Main.getInstance());
     }
 
     @Override
