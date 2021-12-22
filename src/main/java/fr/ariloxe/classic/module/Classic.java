@@ -47,7 +47,7 @@ public class Classic extends Module {
                 Bukkit.broadcastMessage("");
 
                 restart();
-            } else if(gameManager.getAliveUhcPlayers().size() == 1 && PlayerUtils.getPlayerWithoutSpec() == 1){
+            } else if(gameManager.getAliveUhcPlayers().size() != 1 && PlayerUtils.getPlayerWithoutSpec() == 1){
                 UHCPlayer uhcPlayer = gameManager.getAliveUhcPlayers().stream().filter(uhcPlayer1 -> uhcPlayer1.getBukkitPlayer() != null && uhcPlayer1.getBukkitPlayer().getGameMode() != GameMode.SPECTATOR).findFirst().get();
                 gameManager.setGameState(GameState.FINISH);
 
